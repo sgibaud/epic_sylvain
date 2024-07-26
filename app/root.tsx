@@ -214,7 +214,12 @@ function App() {
 						</div>
 						<div className="flex items-center gap-10">
 							{user ? (
-								<UserDropdown />
+								<div className='flex flex-row gap-4'>
+									<Button asChild variant="secondary">
+										<Link to="/list">Liste</Link>
+									</Button>
+									<UserDropdown />
+								</div>
 							) : (
 								<Button asChild variant="default" size="lg">
 									<Link to="/login">Log In</Link>
